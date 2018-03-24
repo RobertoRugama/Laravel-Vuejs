@@ -1,5 +1,19 @@
-var urlUsers = 'https://jsonplaceholder.typicode.com/users';
+
 	new Vue({
-		el: '#main',
+		el: '#crud',
+		created: function(){
+			this.getKeeps();
+		},
+		data: {
+			Keeps: []
+		},
+		methods: {
+			getKeeps: function(){
+				var urlKeeps = 'task';
+				axios.get(urlKeeps).then(response =>{
+					this.Keeps = response.data
+				});
+			}
+		}
 		
 	});

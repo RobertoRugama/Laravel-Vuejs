@@ -15,7 +15,7 @@
     
     </head>
     <body>
-        <div id="main" class="container">
+        <div class="container">
            @yield('content')
         </div>
         <script src="{{ asset('js/app.js')}}"></script>
