@@ -17,4 +17,4 @@ Route::get('/', function () {
 
 });
 
-Route::resource('task','TaskController',['except'=>'show']);
+Route::resource('task','TaskController',['exept'=>'show']);

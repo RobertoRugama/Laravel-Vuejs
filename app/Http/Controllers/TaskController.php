@@ -24,6 +24,8 @@ class TaskController extends Controller
     public function create()
     {
         //
+        $tasks = Task::get();
+        return $tasks;
     }
 
     /**
@@ -47,6 +49,8 @@ class TaskController extends Controller
     public function edit($id)
     {
         //
+        $taks= Task::findOrFail($id);
+        return $taks;
     }
 
     /**
@@ -70,5 +74,7 @@ class TaskController extends Controller
     public function destroy($id)
     {
         //
+        $taks=Task::findOrFail($id);
+        $taks->delete();
     }
 }
